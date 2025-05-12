@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-City</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="t-citylogo.png" alt="Лого T-City" class="logo">
+        <nav class="desktop-nav">
+            <a href="#main">Головна</a>
+            <a href="#eco">Екологія</a>
+            <a href="#air">Якість повітря</a>
+            <a href="#noise">Шум</a>
+            <a href="#about">Про нас</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#main" onclick="toggleMenu()">Головна</a>
+        <a href="#eco" onclick="toggleMenu()">Екологія</a>
+        <a href="#air" onclick="toggleMenu()">Якість повітря</a>
+        <a href="#noise" onclick="toggleMenu()">Шум</a>
+        <a href="#about" onclick="toggleMenu()">Про нас</a>
+    </nav>
+
+    <!-- Головна секція -->
+    <section id="main">
+        <h1>T-City — цифрове обличчя твого міста</h1>
+        <div class="cta-buttons">
+            <button>Мапа</button>
+            <button>Статистика</button>
+        </div>
+        <div class="arrow">↓</div>
+    </section>
+
+    <!-- Екологія -->
+    <section id="eco">
+        <h1>Екологія</h1>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1ABAMduI45CV5h2lUmrAophbMLjl-UfE"></iframe>
+        </div>
+        <div class="data-list">
+            <p>(чим вище — тим краще)</p>
+            <p>
+                Пронятин — 9.0<br>
+                Кутківці — 8.5<br>
+                Канада — 7.4<br>
+                Аляска — 7.0<br>
+                Сонячний — 6.8<br>
+                Дружба — 6.0<br>
+                Новий Світ — 5.8<br>
+                Оболонь — 5.5<br>
+                Східний — 5.0<br>
+                Південний — 4.0<br>
+                Центр — 3.5
+            </p>
+        </div>
+    </section>
+
+    <!-- Якість повітря -->
+    <section id="air">
+        <h1>Якість повітря</h1>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1SGtohhij-cB32fQABI53QN_7itQueBQ"></iframe>
+        </div>
+        <div class="data-list">
+            <p>(чим вище — тим краще)</p>
+            <p>
+                Пронятин — 8.6<br>
+                Кутківці — 8.4<br>
+                Канада — 7.2<br>
+                Сонячний — 6.8<br>
+                Аляска — 6.5<br>
+                Дружба — 6.3<br>
+                Новий Світ — 5.9<br>
+                Оболонь — 5.7<br>
+                Східний — 5.1<br>
+                Південний — 4.9<br>
+                Центр — 4.3
+            </p>
+        </div>
+    </section>
+
+    <!-- Шум -->
+    <section id="noise">
+        <h1>Шум</h1>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1u2GwCSZ13yRSftrxtHD4MO8w87ahqbE"></iframe>
+        </div>
+        <div class="data-list">
+            <p>(чим вище — тим тихіше)</p>
+            <p>
+                Пронятин — 9.0<br>
+                Кутківці — 8.5<br>
+                Канада — 6.5<br>
+                Сонячний — 6.0<br>
+                Оболонь — 5.8<br>
+                Дружба — 5.5<br>
+                Новий Світ — 4.5<br>
+                Східний — 4.0<br>
+                Південний — 3.5<br>
+                Аляска — 3.2<br>
+                Центр — 2.0
+            </p>
+        </div>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about">
+        <h1>Хто створив T-City?</h1>
+        <div class="content">
+            <img src="Me.jpg" alt="Автор проєкту">
+            <div class="data-list">
+                <p>
+                    Привіт! Мене звати Сінкевич Павло, я учень Тернопільського академічного ліцею "Українська гімназія" імені Івана Франка.<br><br>
+                    Моя мета — зробити інформацію про стан довкілля у місті доступною, цікавою та актуальною для кожного мешканця.<br><br>
+                    T-City — це сучасний проєкт, який дозволяє переглядати рівень якості повітря, шуму та екології в різних мікрорайонах Тернополя.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section id="stats">
+        <h1>Загальна статистика</h1>
+        <div class="stats-grid">
+            <div class="stats-column">
+                <h3>Екологія</h3>
+                <ul>
+                    <li>Пронятин – 9.0</li>
+                    <li>Кутківці – 8.5</li>
+                    <li>Канада – 7.4</li>
+                    <li>Аляска – 7.0</li>
+                    <li>Сонячний – 6.8</li>
+                    <li>Дружба – 6.0</li>
+                    <li>Новий Світ – 5.8</li>
+                    <li>Оболонь – 5.5</li>
+                    <li>Східний – 5.0</li>
+                    <li>Південний – 4.0</li>
+                    <li>Центр – 3.5</li>
+                </ul>
+            </div>
+
+            <div class="stats-column">
+                <h3>Якість повітря</h3>
+                <ul>
+                    <li>Пронятин – 8.6</li>
+                    <li>Кутківці – 8.4</li>
+                    <li>Канада – 7.2</li>
+                    <li>Сонячний – 6.8</li>
+                    <li>Аляска – 6.5</li>
+                    <li>Дружба – 6.3</li>
+                    <li>Новий Світ – 5.9</li>
+                    <li>Оболонь – 5.7</li>
+                    <li>Східний – 5.1</li>
+                    <li>Південний – 4.9</li>
+                    <li>Центр – 4.3</li>
+                </ul>
+            </div>
+
+            <div class="stats-column">
+                <h3>Шум</h3>
+                <ul>
+                    <li>Пронятин – 9.0</li>
+                    <li>Кутківці – 8.5</li>
+                    <li>Канада – 6.5</li>
+                    <li>Сонячний – 6.0</li>
+                    <li>Оболонь – 5.8</li>
+                    <li>Дружба – 5.5</li>
+                    <li>Новий Світ – 4.5</li>
+                    <li>Східний – 4.0</li>
+                    <li>Південний – 3.5</li>
+                    <li>Аляска – 3.2</li>
+                    <li>Центр – 2.0</li>
+                </ul>
+            </div>
+        </div>
+        <p style="margin-top: 2rem; text-align: center; opacity: 0.8;">
+            Дані сайту про навколишнє середовище є умовними та можуть не відповідати реальності.
+        </p>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('active');
+        }
+
+        // Плавна прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
