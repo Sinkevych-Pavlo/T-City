@@ -35,8 +35,8 @@
     <section id="main">
         <h1>T-City — цифрове обличчя твого міста</h1>
         <div class="cta-buttons">
-            <button>Мапа</button>
-            <button>Статистика</button>
+            <button onclick="scrollToSection('eco')" >Мапа</button>
+            <button onclick="scrollToSection('stats')" >Статистика</button>
         </div>
         <div class="arrow">↓</div>
     </section>
@@ -187,14 +187,11 @@
             Дані сайту про навколишнє середовище є умовними та можуть не відповідати реальності.
         </p>
     </section>
-
     <script>
         function toggleMenu() {
             const nav = document.getElementById('mobileNav');
             nav.classList.toggle('active');
         }
-
-        // Плавна прокрутка
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -203,6 +200,11 @@
                 });
             });
         });
+        function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
     </script>
 </body>
 </html>
